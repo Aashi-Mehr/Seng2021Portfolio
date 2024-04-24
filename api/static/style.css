@@ -1,0 +1,334 @@
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+:root {
+    --def-transition-duration: .2s;
+    --companany-color:#ff725c;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+}
+
+body {
+    padding-top: 24px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.right-side-div {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black; /* Text color */
+    font-size: 18px;
+    padding: 1.5rem 0;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+    color: #666666; /* Dark grey for less contrast on hover */
+}
+
+.accountText {
+    display: none;
+    color: black; /* Text color */
+}
+
+.profPicContainer {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profilePic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.profileIcon {
+    font-size: 40px;
+    color: black; /* Icon color */
+}
+
+.accountSection {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    position: relative; /* Set a positioning context for the dropdown */
+}
+
+.accountSection:hover .accountText {
+    display: inline;
+}
+
+.accountSection:hover .profPicContainer {
+    width: auto;
+}
+
+.dropdown {
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Set top to 100% to make it drop right below the account section */
+    background-color: white;
+    width: 175px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Adds a shadow for depth */
+    border-top: 3px solid transparent; /* Optional: Adds a little spacing between the icon and dropdown */
+}
+
+.accountSection:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+}
+
+.dropdown a:hover {
+    background-color: #CCCCCC;
+}
+
+/* Styling for the button hover effects */
+input[type="button"]:hover, button:hover {
+    cursor: pointer;
+}
+
+
+h1 {
+    text-align: center;
+    color: var(--companany-color);
+    font-size: 96px;
+    margin-top: 25px;
+}
+
+.hero {
+    padding-right: 8.5rem;
+    padding-left: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: -5rem;
+}
+
+.hero img {
+    width: 750px;
+}
+
+.how-to-get-started {
+    margin-top: 96px;
+    display: flex;
+    gap: 4rem;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.right-started {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right-started h2 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.right-started p {
+    font-size: 18px;
+}
+
+.right-started h3 {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    width: 35%;
+    text-align: center;
+    background-color: var(--companany-color);
+    padding: 1.25rem;
+    border-radius: 100px;
+    color: white;
+    transition: all 0.15s ease-in-out;
+}
+
+.right-started h3:hover {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.get-started {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 96px;
+}
+
+.get-started h2 {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.input-method {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 2rem;
+}
+
+.input-method > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.get-started p {
+    text-align: center;
+}
+
+.input-method input {
+    color: white;
+}
+
+.input-method h2, .custom-file-upload {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    background-color: var(--companany-color);
+    padding: 1.15rem 0.75rem 1.15rem 0.75rem;
+    border-radius: 100px;
+    color: white;
+    transition: all 0.15s ease-in-out;
+}
+
+.input-method h2:hover, .custom-file-upload:hover {
+    gap: 0.75rem;
+    background-color: black;
+    cursor: pointer;
+}
+
+.input-method p {
+    text-align: left;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin-top: 3rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (max-device-width: 1600px) {
+	.bgimg-1, .bgimg-2, .bgimg-3 {
+		background-attachment: scroll;
+		min-height: 400px;
+	}
+}
+
+.flashAlert {
+	z-index: 1000;
+	padding: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: #ff715c; /* Updated background color */
+	color: white; /* Text color */
+	border-radius: 5px;
+	width: fit-content;
+	position: fixed;
+	top: 0; /* Position at the top */
+	margin-top: 0; /* No need for a margin at the top */
+}
+
+.flashAlert:hover {
+	cursor: pointer;
+}
+
+.flashAlert > p {
+	margin: 0;
+	padding: 0;
+}
+
+.fa {
+	background-color: transparent;
+}
+
+footer {
+	margin-top: 25px;
+}
+
+footer {
+	margin-top: 25px;
+}
+
+
+
+
+
+
+
+

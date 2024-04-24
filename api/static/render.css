@@ -1,0 +1,159 @@
+@import url(CSS.css);
+
+* {
+    padding: 0;
+}
+
+body, html {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* DIV ELEMENTS */
+
+/* Box for render */
+.render-box {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    padding-right: calc((100% - 850px) / 2);
+    padding-left: calc((100% - 850px) / 2);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for entire render */
+.render-div {
+    width: 100%;
+    background-color: var(--defaultBackground);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--boxShadow);
+}
+
+/* Contains a tag of level 2, i.e., child to tag1 */
+.tag2 {
+    border: 1px solid var(--mediumBlue);
+    border-radius: 5px;
+    margin: 20px;
+    margin-left: 0;
+}
+
+.tag3 {
+    box-shadow: 0 0 10px var(--opaqueBackground);
+    border-radius: 5px;
+    margin: 20px;
+    padding-top: 5px;
+}
+
+.tag4 {
+    margin-left: 20px;
+}
+
+.tag5 {
+    margin-left: 20px;
+}
+
+
+/* SPAN ELEMENTS */
+
+/* Attribute that is a part of a tag */
+.attribute {
+    font-style: italic;
+    font-size: 85%;
+    color: var(--orange);
+    padding-left: 5px;
+}
+
+.tag3 > .attribute {
+    padding-left: 15px;
+}
+
+/* Name of tag of level 1, i.e., name of parent tag */
+.tagName1 {
+    color: var(--black1);
+    font-size: 110%;
+}
+
+.tagName2 {
+    color: var(--black2);
+    margin-top: -11px; /* Text overlaps the border */
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: block;
+    width: fit-content;
+    background: var(--defaultBackground);
+}
+
+.tagName3 {
+    font-size: 95%;
+    padding-left: 10px;
+    color: var(--black3);
+}
+
+.tagName4 {
+    font-size: 90%;
+    color: var(--black4);
+}
+
+.tagName5 {
+    font-size: 85%;
+    color: var(--black5);
+}
+
+
+/* PARAGRAPH ELEMENT */
+.tag1 > p, .tag2 > p, .tag3 > p, .tag4 > p, .tag5 > p {
+    padding: 5px;
+    padding-left: 15px;
+    color: var(--purple);
+}
+
+.tag2 > p, .tag3 > p {
+    margin-left: 5px;
+}
+
+
+/* LEGEND IN FOOTER */
+
+.legend {
+    background-color: transparent;
+    padding-bottom: 25px;
+}
+
+.legend > h2 {
+    text-align: left;
+    padding: 0 10%;
+    color: var(--black1);
+    font-weight: 550;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.legend > p {
+    padding: 0 10% 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+em {
+    background-color: transparent;
+    font-weight: normal;
+}
+
+
+/* BUTTON TO DOWNLOAD FILE */
+
+form {
+    width: fit-content;
+    padding-left: calc((100% - 850px) / 2);
+    margin-top: 30px;
+}
+
+input[type="button"] {
+    padding: 5px 20px;
+    width: fit-content;
+    border: 1px solid var(--mediumBlue);
+    border-radius: 5px;
+}

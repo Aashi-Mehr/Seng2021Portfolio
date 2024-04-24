@@ -1,0 +1,22 @@
+<!-- Navbar (sit on top) -->
+<div class="nav">
+    <header id="main-header">
+        <a href="{{ url_for('main') }}"><img width="40px" src="{{ url_for('static', filename='logo.svg') }}" alt="Logo"></a>
+
+        <div class="right-side-div">
+            <nav>
+                <ul>
+                    <li class="has-submenu">
+                        <a href="{{ url_for('artisanship') }}">Artisanship</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="{{ url_for('management') }}">Management</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="{{ url_for('teamwork') }}">Teamwork</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>

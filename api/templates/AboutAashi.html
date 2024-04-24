@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'header.html' %}
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="hero-sec-guide">
+        <h1>Aashi Mehrotra</h1>
+        <img width="400px" src="{{ url_for('static', filename='portfolioHeader.svg') }}" alt="">
+    </div>
+
+    <img class="img img-1" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+    <img class="img img-2" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+
+    <div class="guide-options">
+        <form class="w3-col m3 flipCardContainer" action="/about/aashi/artisanship" method="get" onclick="javascript:this.submit();">
+            <h3>Artisanship</h3>
+        </form>
+
+        <form class="w3-col m3 flipCardContainer" action="/about/aashi/management" method="get" onclick="javascript:this.submit();">
+            <h3>Time and Project Management</h3>
+        </form>
+
+        <form class="w3-col m3 flipCardContainer" action="/about/aashi/teamwork" method="get" onclick="javascript:this.submit();">
+            <h3>Teamwork</h3>
+        </form>
+    </div>
+
+    {% include 'footerScripts.html' %}
+</body>
+</html>

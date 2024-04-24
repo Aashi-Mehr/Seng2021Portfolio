@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'header.html' %}
+    <style>
+        td { width: 1000px; }
+
+        .blogLink { color: #FF725C; }
+
+        .blogLink:visited { color: #CC5B4A; }
+
+        .imageCell {
+            width: 700px;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .imageCellImage, table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="hero-sec-guide">
+        <h1 id="header">Artisanship</h1>
+        <img width="600px" src="{{ url_for('static', filename='artisanshipHeader.svg') }}" alt="">
+    </div>
+
+    <img class="img img-1" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+    <img class="img img-2" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+
+    <div class="fullstackWork">
+        <table>
+            <tr><td>
+                <h2>Fullstack Developer for Streamline</h2>
+                <h3>Invoice Class</h3>
+                <ul>
+                    <li>Intermediary object between inputs (CSV, TSV, Excel, GUI Form, and PDF) and XML output</li>
+                    <li>The object class was easily converted into JSON, HTML, XML, etc</li>
+                    <li>Allowed for flexibility, asserted necessary conditions, and made it easy to convert to XML from many different input types</li>
+                    <li>Invoice ID creator within Invoice Class</li>
+                </ul>
+
+                <br>
+                <br>
+
+                <h3>PDF to Invoice Functionality</h3>
+                <ul>
+                    <li>Planned the usage of AWS Textract in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/sIBjGw">week 8 blog</a></li>
+                    <li>Used AWS Textract for the first time: Very accurate OCR techniques</li>
+                    <li>Immediate appreciation due to the simplicity of usage
+                        <ul>
+                            <li>Textract's 'analyze_expense' function returned a easy to traverse dictionary</li>
+                            <li>Fields were automatically interpreted and passed in a key-value pair</li>
+                        </ul>
+                    </li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='InvoiceClassExample.png') }}" alt="Methods within Attribute and Tag Classes to convert to XML or HTML">
+            </td></tr>
+
+            <tr><td>
+                <h3>Rendering Functionality</h3>
+                <ul>
+                    <li>Flask! Very easy to pass in HTML and CSS to render a document beautifully</li>
+                    <li>Reinforced the benefit of creating the Invoice Class
+                        <ul>
+                            <li>Extremely easy to add an additional toHTML() function within the Tag and Attribute parent classes</li>
+                            <li>Formed the basis of the render functionality</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <br>
+                <br>
+
+                <h3>Frontend Authentication</h3>
+                <ul>
+                    <li>Planned the usage of OAuth 2.0 and Google APIs in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/sIBjGw">week 8 blog</a></li>
+                    <li>OAuth 2.0 and Google APIs allow easy sign on with Google, also allowing them to stay logged in
+                        <ul>
+                            <li>No passwords / usernames required</li>
+                            <li>Reduces risk of security issues, and the user knows explicitly what the application accesses</li>
+                        </ul>
+                    </li>
+                    <li>The user's data (Profile Photo and ID) are stored within an AWS S3 bucket</li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='RenderExample.png') }}" alt="Final version of rendered XML of a sample document">
+            </td></tr>
+
+            <tr><td>
+                <h3>Frontend Access to Cloud Storage</h3>
+                <ul>
+                    <li>Flask! Allowed very easy checking to retreive user's ID if they are authenticated</li>
+                    <li>OAuth 2.0 Authentication led to easily implementable Cloud Storage, due to Google IDs
+                        <ul>
+                            <li>No need to store / validate IDs</li>
+                            <li>Comfortably integrates with AWS S3 storage</li>
+                        </ul>
+                    </li>
+                    <li>Pre-exisitng setup of AWS S3 bucket (Done by team member) allowed easy storage, collection and deletion of data</li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='StorageExample.png') }}" alt="Final version of User's stored files page for a sample user">
+            </td></tr>
+        </table>
+    </div>
+
+    <h2>Testing</h2>
+
+    <div class="testingWork">
+        <table>
+            <tr><td>
+                <h3>Coverage</h3>
+                <ul>
+                    <li>Run automatically with GitHub pipeline to ensure coverage doesn't drop below 80% on main</li>
+                    <li>Ensures that our tests are <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#%5CuD83D%5CuDDE3-Discussion-topics.14">covering</a> at least the cases that we've considered within the code</li>
+                </ul>
+
+                <h3>Unit Tests</h3>
+                <ul>
+                    <li>Writing unit tests for work described above was the responsibility of a group member</li>
+                    <li>This ensures that code fits multiple interpretations of the requirements</li>
+                    <li>Wrote some tests for XLSX input testing
+                        <ul>
+                            <li>Ensured that specific and detailed error codes were given on invalid input</li>
+                            <li>Additionally, also ensured that the XML files were well-formed</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>User Testing</h3>
+                <ul>
+                    <li>Asked users for feedback on the parts of the product that they used</li>
+                    <li>Significant feedback regarding the UI was received in the initial stages, leading to significant changes</li>
+                    <li>Incorporated tutor feedback from OTH lessons
+                        <ul>
+                            <li>Focused on improving the UI</li>
+                            <li>Added functionality from Stretch Goals</li>
+                        </ul>
+                    </li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='PyTestExample.png') }}" alt="Example pyTest for 422 error with XLSX file input">
+            </td></tr>
+        </table>
+    </div>
+
+    <h2>Planning and Reflection</h2>
+
+    <div class="planningWork">
+        <table>
+            <tr><td>
+                <h3>Planning</h3>
+                <ul>
+                    <li>Planning with Jira tickets, was done at the beginning of each sprint, and they were consistently updated throuhg out (Image is of board at the end of Sprint 2)</li>
+                    <li>As in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/PoAJFw">week 3 blog</a>, we decided early on to have frequent discussions on methodologies used within programs</li>
+                </ul>
+
+                <h3>Reflection</h3>
+                <ul>
+                    <li>Shown in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/DQAsGQ">week 6 blog</a>, I have consistently put effort in ensuring a good quality of code, with strong support of underlying programming principles</li>
+                    <li>The UML diagram helped significantly in making the process of Invoice Class creation simpler</li>
+                    <li>Shown in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/gAC3Gw">week 10 blog</a>, I have been able to acheive more than I expected I would be able to, and to a better standard</li>
+                </ul>
+
+                <h3>Improvement</h3>
+                <ul>
+                    <li>Within artisanship, I upskilled myself consistently throuhg out the project, as its entirety included new concepts</li>
+                    <li>New tools used, discussed in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/H4D5GQ">week 7 blog</a>
+                        <ul>
+                            <li>AWS Textract</li>
+                            <li>AWS S3 Bucket</li>
+                            <li>OAuth 2.0 with Google</li>
+                            <li>Python Flask (And its multitude of applications)</li>
+                        </ul>
+                    </li>
+                    <li>Significant experience gained in familiar tools
+                        <ul>
+                            <li>O-O Principles with Python</li>
+                            <li>HTML, CSS and JavaScript with Flask</li>
+                            <li>CSS for flip cards</li>
+                            <li>GitHub and Vercel</li>
+                        </ul>
+                    </li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='JiraBoardExample.png') }}" alt="Jira Task Board Example at Sprint 2 End">
+            </td></tr>
+
+            <tr><td>
+                <h3>Helping Others</h3>
+                <ul>
+                    <li>Shown in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/DQAsGQ">week 6 blog</a>, I helped the frontend manager, Om, with Python's Flask to create a better GUI</li>
+                    <li>Additionally, I helped other members better understand the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/HTxBFg">requirements of invoices</a>
+                        <ul>
+                            <li>Explaining the Mandatory / Optional fields within an XML invoice</li>
+                            <li>Showing examples of the usage of the Invoice Class</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Receiving Help</h3>
+                <ul>
+                    <li>The backend manager, Abdul, gained proficiency with AWS's S3 bucket very early on, and he helped me significantly with accessing AWS features
+                        <ul>
+                            <li>Setting up Credentials for Textract</li>
+                            <li>Using the S3 Bucket for Invoice and User Storage</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Problems and Solutions</h3>
+                <ul>
+                    <li>While planning the structure of the Intermediary Format within the beginning of Sprint 2, I'd initially planned creating one large class that contains all information. However, this started creating a very large class with a lot of overhead, so I changed it to the structure shown in <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/~71202097b5a858278c4bdaa25a81b841727a9d/blog/2024/03/25/422313997/Wordless+Somewhat+Reflection#Personal-Tasks">this UML Diagram</a></li>
+                    <li>Problems noticed at the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#%5CuD83D%5CuDDE3-Discussion-topics.16">end of sprint 2</a>:
+                        <ul>
+                            <li>Group members were having difficulty managing the learning and programming in parallel, so we decided to focus on quality over quantity in Sprint 3</li>
+                            <li>The CI/CD pipeline wasn't setup, we delegated the setup task to Om</li>
+                        </ul>
+                    </li>
+                    <li>To solve problems noticed during <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#Problems-Noticed">standups at the beginning of sprint 4</a>:
+                        <ul>
+                            <li>Immediately fixed linting errors</li>
+                            <li>Added tests for rendering and PDF to XML function</li>
+                            <li>Created a design for a significantly better GUI</li>
+                        </ul>
+                    </li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='OldGUIFormExample.png') }}" alt="Jira Task Board Example at Sprint 2 End">
+                <br>
+                <p>&downarrow;</p>
+                <br>
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='LatestGUIFormExample.png') }}" alt="Jira Task Board Example at Sprint 2 End">
+            </td></tr>
+        </table>
+    </div>
+
+    {% include 'footerScripts.html' %}
+</body>
+</html>

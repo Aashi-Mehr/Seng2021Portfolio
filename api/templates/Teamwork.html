@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'header.html' %}
+    <style>
+        td { width: 1000px; }
+
+        .blogLink { color: #FF725C; }
+
+        .blogLink:visited { color: #CC5B4A; }
+
+        .imageCell {
+            width: 700px;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .imageCellImage, table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="hero-sec-guide">
+        <h1 id="header">Teamwork</h1>
+        <img width="400px" src="{{ url_for('static', filename='teamworkHeader.svg') }}" alt="">
+    </div>
+
+    <img class="img img-1" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+    <img class="img img-2" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+
+    <div class="contributionWork">
+        <table>
+            <tr><td>
+                <h2>Contribution</h2>
+                <ul>
+                    <li>As discussed in my <a class="blogLink" href="{{ url_for('artisanship') }}">Artisanship Section of the Portfolio</a>, I effectively contributed to the project and ensured timely completion so that team members were not delayed in starting their work due to dependencies</li>
+                    <li>Additionally, I ensured that I was flexible and supportive, in case others were overworked. I took up Om's resopnsibility for the Authentication on the frontend</li>
+                    <li>Outside of the project, I gave effective feedback to others during the blogs, to give them questions that urge them to have greater reflection in their blogging</li>
+                    <li>Additionally, I helped out a fellow Seng2021 member by giving him applicaple feedback for his sameple report, ensuring that all of the feedback was relevant to the marking criteria (Image on the right)</li>
+                </ul>
+
+                <br>
+                <br>
+
+                <h2>Planning</h2>
+                <ul>
+                    <li>Planned for regular meetings to ensure team solidarity and clear communication, this can be seen within the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/XwELFg">Communications document</a>, as the meetings were very regular, and planned on Discord</li>
+                    <li>As seen in <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#%5CuD83D%5CuDDE3-Discussion-topics.3">example</a>, our strong discussion and teamwork at the very beginning of the project was fundamental in ensuring that the frameworks that were decided and the way that work was delegated took into account everyone's strengths and the learning curve that some would have</li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 600px;" src="{{ url_for('static', filename='PortfolioFeedbackExample.png') }}" alt="Feedback given to classmate regarding his Report">
+                <br>
+                <img class="imageCellImage" style="width: 600px;" src="{{ url_for('static', filename='BlogFeedbackExample.png') }}" alt="Feedback given to classmate regarding his blog post">
+            </td></tr>
+
+            <tr><td colspan="2">
+                <h2>Reflection</h2>
+                <ul>
+                    <li>In the initial stages of the project, teamwork and regular meetings were difficult to prioritise, especailly as other subjects picked up their pace
+                        <ul>
+                            <li>At the beginning of the sprints, the amount of progress progress and number of meetings meetings and standups were low, due to each member's prioritisation of other work</li>
+                            <li>As I discussed within my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/~71202097b5a858278c4bdaa25a81b841727a9d/blog/2024/03/25/422313997/Wordless+Somewhat+Reflection#Sprint-2-Retrospective">sprint 2 retrospective</a>, the group did also discuss and realise that, nearer to the end of a sprint, the number of meetings were too high and standups too low, leading to wasted time as spare time was spent on meetings instead of work</li>
+                        </ul>
+                    </li>
+                    <li>Additionally, nearer to the end of the project, improvements could have been made during communication when designing the GUI
+                        <ul>
+                            <li>I was unsure of the progress that Om was maing due to the lack of his standups nearer the beginning of Sprint 4</li>
+                            <li>As I knew I'd be going on holiday and wouldn't have significant time to work on the project then, I created a GUI that used the tutor's feedback from the Sprint 3 pitch</li>
+                            <li>However, Om later put forward his designs, which were significantly more appealing, and followed tutor feedback to a greater extent</li>
+                            <li>This led to repeated work, as the group as a whole agreed that it would be better to switch to his designs</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <br>
+                <br>
+
+                <h2>Improvements</h2>
+                <ul>
+                    <li>As a response to the lack of standups, during the middle of Sprint 2, we discussed and decided to improve by ensuring that members had at least 2 standups in a week
+                        <ul>
+                            <li>Within Teams communications, we can see a significant improvement in the number of standups taking place</li>
+                            <li>This improved the pace of work significantly, and members were able to know very easily when dependencies were fulfilled, and the changes occurring to the design of the project</li>
+                        </ul>
+                    </li>
+                    <li>Additionally, we reduced the number of whole team meetings, and instead initiated calls for work requiring numberous people
+                        <ul>
+                            <li>As an example, Abdul and I would often have meetings together, as we both used the S3 bucket, as well as AWS credentials and identities</li>
+                            <li>Paul and Aiden would often have meetings together, as for Sprint 2, they were working on input processing, which required similar algorithmic writing</li>
+                            <li>This also improved pace of work, as well as allowing us greater time to bounce ideas off of each other, without wasting the time of the entire team</li>
+                        </ul>
+                    </li>
+                    <li>While reflections from the Sprint 4 teamwork issues could not be applied, as the project was at its end, a large takeaway from the entire project, as I discussed in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/gAC3Gw">week 10 blog</a>, was the importance of clear communication and participating in standups</li>
+                </ul>
+            </td></tr>
+
+            <tr><td>
+                <h2>Problems and Solutions</h2>
+                <ul>
+                    <li>As discused above, there were problems arising from the time management required for each member to be able to adequately prioritise the project along with their other subjects
+                        <ul>
+                            <li>Over the course of the project, as described above, each member steadfastly worked on it, and we were able to put adequate effort and time into the project, to acheive a good outcome</li>
+                            <li>Within the next projects, we will all likely ensure that we start early (Which was one of the biggest takeaways in terms of both time management and teamwork) in all of our subjects, so that, closer to due dates, we do not have to make decisions whereby we need to forego planned work</li>
+                        </ul>
+                    </li>
+                    <li>While designing the final GUI in Sprint 4
+                        <ul>
+                            <li>As discussed above, some repeated work was done due to poor team communication</li>
+                            <li>On top of this, there were also disagreements between Aiden and I regarding the section for the Guides and Getting Started
+                                <ul>
+                                    <li>I was considering the website from the perspective of a frequent user, and suggesting that the Services section be the first section of the page</li>
+                                    <li>However, Aiden beleived strongly that the 'Getting Started', along with some advertisement convincing the user to use our product, should be the first section of the home page</li>
+                                    <li>There wasn't significant conflict, as I decided to reach out to the tutor and ask about the general contents of the homepage. She told me that the home page was supposed to be for a new user, thus requiring the advertisement on top, and a navbar (Or similar) can be implmented for ease of navigation for a frequent user</li>
+                                    <li>I immediately got back to Aiden with the tutor's feedback and agreed that the <a class="blogLink" href="https://www.figma.com/file/sEjYoyeMe3VJJJDElsnnUz/Updated-Front-End?type=design&node-id=21%3A2&mode=design&t=tCL9uIbyayOSyMS9-1">design he'd created</a> would better fit our requirements, and I asked if he could put a 'Services' heading on the navbar</li>
+                                    <li>Thus, I was able to ensure that any significant conflict did not arise, and that a decision was reached quickly</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 600px;" src="{{ url_for('static', filename='DiscordDiscussion1.png') }}" alt="Discussion on GUI Design: Aiden's initial response">
+                <br>
+                <img class="imageCellImage" style="width: 600px;" src="{{ url_for('static', filename='DiscordDiscussion2.png') }}" alt="Discussion on GUI Design: My response">
+                <br>
+                <img class="imageCellImage" style="width: 600px;" src="{{ url_for('static', filename='TutorResponseExample.png') }}" alt="Discussion on GUI Design: Tutor's response">
+            </td></tr>
+        </table>
+
+    {% include 'footerScripts.html' %}
+</body>
+</html>

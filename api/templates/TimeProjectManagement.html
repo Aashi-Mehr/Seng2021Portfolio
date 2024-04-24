@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'header.html' %}
+    <style>
+        td { width: 1000px; }
+
+        .blogLink { color: #FF725C; }
+
+        .blogLink:visited { color: #CC5B4A; }
+
+        .imageCell {
+            width: 700px;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .imageCellImage, table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="hero-sec-guide">
+        <h1 id="header">Time and Project<br>Management</h1>
+        <img width="600px" src="{{ url_for('static', filename='managementHeader.svg') }}" alt="">
+    </div>
+
+    <img class="img img-1" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+    <img class="img img-2" src="{{ url_for('static', filename='flying-folder.svg') }}" alt="">
+
+    <div class="planningWork">
+        <table>
+            <tr><td>
+                <h2>Planning</h2>
+                <ul>
+                    <li>Sprint 1 focused wholly on planning, with us acheiving a very structured backlog and Jira task board</li>
+                    <li>As I discussed in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/PoAJFw">week 2 blog</a>, we finished Sprint 1 ahead of time, and to a high standard, losing marks only in areas in which we misunderstood the requirements</li>
+                    <li>Planning for other sprints similarly occurred within a sprint planning meeting, with tasks created based on the specification, appopriately delegated, and Jira tickets created / modified</li>
+                    <li>As a product owner, I took a greater role in understanding the specification and creating tasks based on the quality of the product that we agreed we wanted to deliver. Delegation generally occurred by members opting to finish a task based on their comfort and experience</li>
+                </ul>
+
+                <br>
+                <br>
+
+                <h2>Product Owner</h2>
+                <ul>
+                    <li>For each sprint, I ensured that the appopriate Confluence pages were created and discussed all requirements regarding the product itself, as seen in the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#%5CuD83D%5CuDDE3-Discussion-topics.17">Communications Page</a></li>
+                    <li>Managing and prioritizing the product backlog
+                        <ul>
+                            <li>Within Sprint 1, while the group together discussed the ordering and tasks to create on Jira, I took responsibility for double checking and ensuring that the backlog and taskboard was adequatelty priorised</li>
+                            <li>Additionally, along with Om (Co-Product-Owner), I also ensured that the tickets were being adequately updated</li>
+                        </ul>
+                    </li>
+                    <li>Learning the requirements
+                        <ul>
+                            <li>I went into depth about the requirements of an XML document, and in particular a UBL 2.1 XML document, then created a <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/HTxBFg">Confluence Page</a> to make it easier for the team to understand the items to extract from the input files</li>
+                            <li>Additionally, I also discussed the requirements within a meeting and explained it in depth to ensure that all members were comfortable with a UBL 2.1 XML documents and their structure</li>
+                        </ul>
+                    </li>
+                </ul>
+            </td><td class="imageCell">
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='BacklogExample.png') }}" alt="Jira Backlog Example at Sprint 1 End">
+                <br>
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='TimelineExample.png') }}" alt="Jira Timeline Example at Sprint 1 End">
+                <br>
+                <img class="imageCellImage" style="width: 400px;" src="{{ url_for('static', filename='TaskBoardExample.png') }}" alt="Jira Task Board Example at Sprint 1 End">
+            </td></tr>
+        </table>
+
+        <h2><a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/3wAdFg">Constraints</a></h2>
+        <ul>
+            <li>Taking time and capability constraints into consideration, we discussed and delegated Sprint 2 tasks based on expertise
+                <ul>
+                    <li>Om took responsibility for the Frontend and GUI form as he was confident in design</li>
+                    <li>Abdul took resopnsibility for the Backend API as he had some prior experience, and he was interested</li>
+                    <li>I took responsibility for the Backend Intermediary Class as I have experience in Python, and in O-O programming</li>
+                    <li>Aiden and Paul took responsibility for creating a function to convert an input format to an XML as they were willing to do the necessary learning within that</li>
+                </ul>
+            </li>
+            <li>Taking cost and learning curve into experience, we decided on APIs and frameworks to use
+                <ul>
+                    <li>AWS provided an extensive range of functionality (Cheap for small usage), and we decided to consider it even though it would require a greater time investment</li>
+                    <li>Everyone had experience with Python, and Flask is known to be easy to learn, so these frameworks were easy to agree on</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Reflection and Improvements</h2>
+        <ul>
+            <li>Sprint 1
+                <ul>
+                    <li>At the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/PoAJFw">end of sprint 1</a>, we reflected that we could've used more standups due to unclear communication at some points</li>
+                    <li>Within the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/XwELFg">communications document</a>, the number of meetings increased from Sprint 1 to Sprint 3 as a response, and the standups occurring on Discord also increasd</li>
+                </ul>
+            </li>
+            <li>Sprint 2 and 3
+                <ul>
+                    <li>As I discussed in my <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/6YyFFw">week 4 blog</a>, I was able to ensure that my preliminary tasks were done at the beginning of sprints, as I was already very comfortable with O-O concepts and Python</li>
+                    <li>However, other's tasks required greater learning, so delays occurred, causing significant discussion within the <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/~71202097b5a858278c4bdaa25a81b841727a9d/blog/2024/03/25/422313997/Wordless+Somewhat+Reflection#Sprint-2-Retrospective">Spring 2 retrospective</a> about clearer communication about difficulties being faced</li>
+                    <li>This did lead to <a class="blogLink" href="https://unswcse.atlassian.net/wiki/x/H4D5GQ">better time management</a> within sprint 3</li>
+                </ul>
+            </li>
+            <li>Sprint 4
+                <ul>
+                    <li>The <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#%5CuD83D%5CuDDE3-Discussion-topics.20">sprint 3 retrospective</a> urged the team to start earlier within Sprint 4, however, we did manage much better communication within Sprint 3</li>
+                    <li>The meetings and standups did not diminish within Sprint 4, and I was able to follow on my agreement to start early by finishing majority of my work by the 6th, as can be seen in these <a class="blogLink" href="https://unswcse.atlassian.net/wiki/spaces/W13ACONFLU/pages/369819999/Communications#Standups-05%2F04">standups</a></li>
+                </ul>
+            </li>
+            <li>Overall, there was significant improvement in time management and communication by the end of the sprints. We were able to deliver a good product on time, and practice the final pitch well, so we ended the project well</li>
+        </ul>
+
+    {% include 'footerScripts.html' %}
+</body>
+</html>

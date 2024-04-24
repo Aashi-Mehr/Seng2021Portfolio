@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif
+}
+
+:root {
+    --font-family: 'Inter', sans-serif;
+    --company-colour-1: #2c67f2;
+    --font-size-1: 128px;
+    --font-size-2: 90px;
+    --font-size-3: 64px;
+    --font-size-4: 45px;
+    --font-size-5: 32px;
+    --font-size-6: 23px;
+    --font-size-7: 16px;
+    --text-gradient: linear-gradient(90deg, #004FF9, #000);
+}
+
+.basic-hover:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+
+}
+
+.grad-text {
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline;
+}
+
+/* Overall webpage */
+body, html {
+	justify-content: center;
+	align-items: center;
+}
+
+.basic-btn {
+    font-family: var(--font-family);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar-options ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#nav-bar-op {
+    font-size: 1.25rem;
+    margin: 2.5rem 3rem 2.5rem 3vw;
+}
+
+.nav-bar-logo a {
+    font-size: calc(var(--font-size-7) * 1.25);
+    margin-right: 16rem;
+    color: black;
+    text-decoration: none;
+    display: none;
+}
+
+.nav-bar button {
+    font-family: var(--font-family);
+    font-size: calc(var(--font-size-7) * 1.25);
+    width: 200px;
+    height: 64px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--company-colour-1);
+    color: white;
+    font-weight: 700;
+    margin-right: calc(100vh - 97vh);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bar-options a {
+    color: #000;
+}
+
+.hero-sec {
+    margin-top: 48px;
+    margin-bottom: -24px;
+}
+
+.hero-sec-text h1, .hero-sec-text span,  .hero-sec-text em{
+    font-size: calc(var(--font-size-5) + 6vw);
+    text-transform:uppercase;
+    text-align: center;
+    font-weight: 1000;
+    line-height: calc(10px + 15vh);
+}
+
+.hero-sec-info {
+    text-align: center;
+    margin: calc(2rem) calc(21.5vw) calc(0rem) calc(21.5vw);
+}
+
+.hero-sec-info p {
+    font-size: calc(var(--font-size-7) + 0.5vw);
+}
+
+.hero-sec-butt {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.hero-sec-butt button{
+    border: none;
+    background-color: var(--company-colour-1);
+    font-size: var(--font-size-5);
+    color: white;
+    font-weight: 700;
+    width: 400px;
+    height: 96px;
+    border-radius: 100px;
+}
+
+.feature-section-1 {
+    margin: 5.5rem 3rem 4.5rem 3vw;
+}
+
+.feature-section-info {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.feature-section-info h2, .feature-section-info em {
+    font-size: var(--font-size-4);
+    font-size: 1000;
+    text-transform: capitalize;
+    line-height: 50px;
+}
+
+.feature-section-info-pros {
+    display: grid
+}
+
+.large-container {
+    display: flex;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+.feature-section-1 img {
+    margin-bottom: 72px;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.services-sec {
+    margin-top: 7.5rem;
+}
+
+.services-sec > p, .services-sec h2 {
+    text-align: center;
+}
+
+.services-sec h2 {
+    font-size: calc(var(--font-size-3) - 0.75vw);
+    font-weight: 1000;
+}
+
+.services-sec p:nth-of-type(2) {
+    font-size: calc(10px + 0.5vw);
+    margin: 1rem 10rem 3rem 10rem;
+}
+
+.services-tab-container {
+    overflow: hidden;
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.services-tab-container img {
+    width: 100%;
+    height: 65%;
+}
+
+.services-tab {
+    border: solid 2px black;
+    width: 100%;
+    padding: 2rem;
+}
+
+.services-tab h3 { 
+    font-weight: 500;
+    font-size: calc(16px + 0.5vw);
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.services-tab p {
+    margin-bottom: 2rem;
+}
+
+.services-tab a {
+    text-decoration: none;
+    color:#000;
+}
+
+.services-tab:hover {
+    cursor: auto;
+}
+
+.services-tab a:hover {
+    text-decoration: underline;
+    transform: scaleY(-5px);
+    transition: all 0.3s ease;
+}
+
+.pricing-plan-sec {
+    margin-top: 5rem;
+}
+
+.pricing-plan-sec > p, .pricing-plan-sec h2 {
+    text-align: center;
+}
+
+.pricing-plan-sec h2 {
+    font-size: calc(var(--font-size-3) - 0.75vw);
+    font-weight: 1000;
+}
+
+.pricing-plan-sec p:nth-of-type(2) {
+    font-size: calc(10px + 0.5vw);
+    margin: 1rem 10rem 2rem 10rem;
+}
+
+.pricing-tabs-container {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.monthly-yearly-div {
+    display: flex;
+    justify-content: center;
+}
+
+.monthly-yearly-div button {
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    border-radius: 0px;
+    border: solid 2px black;
+    cursor: pointer;
+    margin-bottom: 5rem;
+}
+
+.monthly-yearly-div button:nth-child(1) {
+    background-color: black;
+    color: white;
+}
+
+.pricing-tab {
+    border: solid 2px black;
+    width: 50%;
+    height: calc(95vh);
+    padding: 3rem;
+}
+
+.pricing-tab p {
+    text-align: right;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.pricing-tab h4 {
+    font-weight: 7000;
+    font-size: calc(var(--font-size-4));
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+hr {
+    color: black;
+    background-color: black;
+    height: 1.5px;
+    border: none;
+}
+
+.pricing-tab ul li:nth-child(1) {
+    list-style: none;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.pricing-tab button:nth-of-type(1) {
+    margin-top: 5rem;
+}
+
+.pricing-tabs-container ul li {
+    font-size: calc(var(--font-size-7) + 0.55vw);
+    margin-left: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.pricing-tabs-container button {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    background-color: black;  
+    color: white;
+    font-family: var(--font-family);
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: calc(var(--font-size-6) + 0.05vw);
+}
+
+.pricing-tabs-container button:hover {
+    color: black;
+    border: solid 2px black;
+    background-color: white;
+}
+
+.faq-sec h2 {
+    margin-top: 5rem;
+    font-size: calc(var(--font-size-3) - 0.75vw);
+    font-weight: 1000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.faq-sec > p {
+    font-size: calc(var(--font-size-7) + 0.25vw);
+    text-align: center;
+
+}
+
+.faq-container-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.faq-container:nth-child(1) {
+    margin-top: 3rem;
+}
+
+.faq-container {
+    border: solid 2px black;
+    margin-top: 1rem;
+    width: 50%;
+    padding: 1.5rem 1rem 1.5rem 1.5rem;
+    font-weight: 700;
+}
+
+.faq-container p:nth-of-type(2) {
+    text-align: end;
+    margin-top: -1.25rem;
+    margin-right: 1rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer p {
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
